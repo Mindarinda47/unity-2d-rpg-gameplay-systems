@@ -23,7 +23,7 @@ Unity 2D RPG에서 플레이어 상호작용을 중심으로 퀘스트, 인벤�
 - 적 추적·공격 상태 전환, 피격, 넉백, 사망 처리
 - 퀘스트 상태·진행도·보상과 NPC 대화 분기 연동
 - 수량 기반 인벤토리, 아이템 획득·소비, 소지금 관리
-- 플레이어·인벤토리·퀘스트 상태의 JSON 저장 및 복원
+- 소지금·인벤토리·퀘스트 상태의 JSON 저장 및 복원
 - 이벤트 기반 HUD·인벤토리·퀘스트 UI 갱신
 
 ## 기술 스택
@@ -40,10 +40,10 @@ Unity 2D RPG에서 플레이어 상호작용을 중심으로 퀘스트, 인벤�
 |---|---|---|
 | 퀘스트 | 상태 전이, 목표 진행도, 추적 퀘스트, 보상 처리 | [QuestManager](Assets/Scripts/Manager/QuestManager.cs), [QuestData](Assets/Scripts/Quest/QuestData.cs) |
 | 인벤토리 | 동일 아이템 수량 병합, 추가·제거·조회, 변경 이벤트 | [PlayerInventory](Assets/Scripts/Inventory/PlayerInventory.cs), [InventoryEntry](Assets/Scripts/Inventory/InventoryEntry.cs) |
-| 저장 | 플레이어·소지금·인벤토리·퀘스트 상태 직렬화와 안전한 복원 | [SaveManager](Assets/Scripts/Manager/SaveManager.cs), [GameSaveData](Assets/Scripts/SaveData/GameSaveData.cs) |
+| 저장 | 소지금·인벤토리·퀘스트 상태의 JSON 저장 및 복원 | [SaveManager](Assets/Scripts/Manager/SaveManager.cs), [GameSaveData](Assets/Scripts/SaveData/GameSaveData.cs) |
 | 적 행동 | 거리 기반 추적·공격 전환, 공격 범위 히스테리시스, 넉백 연동 | [EnemyAI](Assets/Scripts/Enemy/EnemyAI.cs), [EnemyHealth](Assets/Scripts/Enemy/EnemyHealth.cs) |
 | 플레이어 전투 | 공격 쿨다운, 범위 판정, 피해 전달, 공격 애니메이션 | [PlayerCombat](Assets/Scripts/Player/PlayerCombat.cs), [IDamageable](Assets/Scripts/Interaction/IDamageable.cs) |
-| 대화·상호작용 | NPC별 대화 진행, 퀘스트 상태 분기, 선택지와 퀘스트 동작 연결 | [NPCInteractable](Assets/Scripts/Interaction/NPCInteractable.cs), [DialogueManager](Assets/Scripts/Manager/DialougueManager.cs) |
+| 대화·상호작용 | NPC별 대화 진행, 퀘스트 상태 분기, 선택지와 퀘스트 동작 연결 | [NPCInteractable](Assets/Scripts/Interaction/NPCInteractable.cs), [DialogueManager](Assets/Scripts/Manager/DialogueManager.cs) |
 
 ## 설계 의도
 

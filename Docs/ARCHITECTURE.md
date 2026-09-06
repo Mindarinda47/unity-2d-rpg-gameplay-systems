@@ -15,7 +15,6 @@ flowchart LR
     Reward --> Inventory[Inventory / Wallet]
     Quest --> Save[Save Data]
     Inventory --> Save
-    Player --> Save
 ```
 
 ## 책임 구분
@@ -77,7 +76,7 @@ flowchart LR
     Lookup --> Runtime
 ```
 
-`GameSaveData`에는 위치, 체력, 소지금, 인벤토리 항목, 퀘스트 상태처럼 복원에 필요한 값만 담습니다. ScriptableObject나 MonoBehaviour 참조는 저장하지 않고 `itemId`, `questId`로 다시 연결합니다.
+`GameSaveData`에는 소지금, 인벤토리 항목, 퀘스트 상태와 진행도를 저장합니다. Unity Object 참조 대신 `itemId`, `questId`를 저장하여 불러올 때 런타임 데이터와 다시 연결합니다.
 
 불러오기 과정에서는 파일 읽기와 JSON 변환 실패, null 데이터·목록, 등록되지 않은 ID를 확인합니다. 유효하지 않은 개별 항목은 경고 후 건너뛰며, 필수 매니저나 아이템 데이터베이스가 없으면 저장 또는 복원을 시작하지 않습니다. 기존 저장 데이터 구조는 유지합니다.
 

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-// Data Transfer Object - DOT
+// Data Transfer Object - DTO
 // 데이터를 옮기기 위한 객체
 [Serializable]
 public class GameSaveData
