@@ -4,6 +4,23 @@ Unity 2D RPG에서 플레이어 상호작용을 중심으로 퀘스트, 인벤�
 
 주요 소스 코드와 설계 문서를 공개하며 외부 아트·폰트 리소스는 포함하지 않습니다.
 
+## 구현 화면
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<img src="Docs/media/dialogue-gameplay.png" alt="Play Mode에서 대화 UI가 활성화된 장면" width="100%"><br>
+<strong>Play Mode — 대화 시스템</strong><br>
+NPC 상호작용에 따라 대화 UI가 활성화된 실제 플레이 화면입니다.
+</td>
+<td width="50%" valign="top">
+<img src="Docs/media/ui-canvas-overview.png" alt="Unity Editor에서 전체 UI Canvas 구성을 확인하는 화면" width="100%"><br>
+<strong>Unity Editor — UI Canvas 구성</strong><br>
+체력·재화·퀘스트·인벤토리 UI의 전체 배치와 구성 요소를 확인하는 Editor 화면입니다.
+</td>
+</tr>
+</table>
+
 ## 프로젝트 목적
 
 탐색, NPC 대화, 퀘스트 수행, 전투, 보상, 저장·불러오기가 하나의 플레이 흐름으로 이어지는 2D RPG를 구현하는 것이 목표였습니다. 개별 기능보다 시스템 사이의 상태 전달과 UI 동기화에 중점을 두었습니다.
