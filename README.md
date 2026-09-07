@@ -2,14 +2,7 @@
 
 Unity 2D RPG에서 플레이어 상호작용을 중심으로 퀘스트, 인벤토리, 전투, 대화, 저장 시스템을 연결한 개인 프로젝트입니다.
 
-게임플레이 프로그래밍 포트폴리오를 위해 주요 소스 코드와 설계 문서를 공개하며 외부 아트·폰트 리소스는 포함하지 않습니다.
-
-## 3분 검토 경로
-
-1. [QuestManager](Assets/Scripts/Manager/QuestManager.cs)와 [QuestData](Assets/Scripts/Quest/QuestData.cs)에서 퀘스트 상태와 진행도 관리를 확인합니다.
-2. [PlayerInventory](Assets/Scripts/Inventory/PlayerInventory.cs), [SaveManager](Assets/Scripts/Manager/SaveManager.cs)에서 런타임 데이터와 저장 데이터의 연결을 확인합니다.
-3. [EnemyAI](Assets/Scripts/Enemy/EnemyAI.cs), [PlayerCombat](Assets/Scripts/Player/PlayerCombat.cs), [EnemyHealth](Assets/Scripts/Enemy/EnemyHealth.cs)에서 전투 상태 전환과 피격 흐름을 확인합니다.
-4. 전체 시스템 관계는 [ARCHITECTURE.md](Docs/ARCHITECTURE.md), 주요 개선 사례는 [PROBLEM_SOLVING.md](Docs/PROBLEM_SOLVING.md)에서 확인할 수 있습니다.
+주요 소스 코드와 설계 문서를 공개하며 외부 아트·폰트 리소스는 포함하지 않습니다.
 
 ## 프로젝트 목적
 
@@ -60,12 +53,6 @@ Unity 2D RPG에서 플레이어 상호작용을 중심으로 퀘스트, 인벤�
 - 파일 접근·JSON 변환 실패를 방어하고, 저장 데이터나 필수 목록이 유효하지 않으면 복원을 중단하도록 했습니다. 목록이 존재하는 경우 비어 있거나 등록되지 않은 아이템·퀘스트 ID는 해당 항목만 건너뛰고 나머지 항목의 복원을 계속합니다.
 
 구현 배경과 검증 기준은 [PROBLEM_SOLVING.md](Docs/PROBLEM_SOLVING.md)에 정리했습니다.
-
-## 실행 및 시연
-
-이 저장소는 주요 C# 구현과 설계 설명을 검토하기 위한 코드 포트폴리오입니다. 외부 아트·폰트와 실행 프로젝트 전체는 포함하지 않습니다.
-
-시연 영상은 지원서 제출 자료에 별도로 포함합니다.
 
 ## 저장소 구성
 
